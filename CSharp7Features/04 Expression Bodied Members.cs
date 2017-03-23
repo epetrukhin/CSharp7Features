@@ -1,6 +1,8 @@
 ﻿// ReSharper disable UnusedMember.Global
 // ReSharper disable ConvertToAutoPropertyWhenPossible
 
+#pragma warning disable 660,661
+
 namespace CSharp7Features
 {
 	internal sealed class ExpressionBodiedMembers

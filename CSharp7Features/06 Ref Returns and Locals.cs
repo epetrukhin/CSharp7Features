@@ -50,14 +50,14 @@ namespace CSharp7Features
 			index = "42"; // data: { 1, 42, 3 }
 		}
 
-		private static ref int DoNotCompiled()
-		{
-			var x = 42;
-			return ref x;
-
-//			var xs = new[] { 1, 2, 3 };
-//			return ref xs[1];
-		}
+//		private static ref int DoNotCompiled()
+//		{
+//			var x = 42;
+//			return ref x;
+//
+////			var xs = new[] { 1, 2, 3 };
+////			return ref xs[1];
+//		}
 
 		private sealed class Foo
 		{
