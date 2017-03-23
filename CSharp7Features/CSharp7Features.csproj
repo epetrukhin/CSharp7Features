@@ -41,12 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="1 Binary Literals.cs" />
-    <Compile Include="2 Digit Separator.cs" />
-    <Compile Include="3 Throw Expressions.cs" />
-    <Compile Include="4 Expression Bodied Members.cs" />
-    <Compile Include="5 ValueTask.cs" />
-    <Compile Include="6 Ref Returns and Locals.cs" />
+    <Compile Include="01 Binary Literals.cs" />
+    <Compile Include="02 Digit Separator.cs" />
+    <Compile Include="03 Throw Expressions.cs" />
+    <Compile Include="04 Expression Bodied Members.cs" />
+    <Compile Include="05 ValueTask.cs" />
+    <Compile Include="06 Ref Returns and Locals.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
