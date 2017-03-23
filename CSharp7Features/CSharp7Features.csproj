@@ -46,6 +46,7 @@
     <Compile Include="3 Throw Expressions.cs" />
     <Compile Include="4 Expression Bodied Members.cs" />
     <Compile Include="5 ValueTask.cs" />
+    <Compile Include="6 Ref Returns and Locals.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
