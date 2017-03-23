@@ -49,6 +49,7 @@
     <Compile Include="06 Ref Returns and Locals.cs" />
     <Compile Include="07 Local Functions.cs" />
     <Compile Include="08 Out Variables.cs" />
+    <Compile Include="09 Deconstruction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
