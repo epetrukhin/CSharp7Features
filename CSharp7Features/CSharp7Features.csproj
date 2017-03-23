@@ -47,6 +47,7 @@
     <Compile Include="04 Expression Bodied Members.cs" />
     <Compile Include="05 ValueTask.cs" />
     <Compile Include="06 Ref Returns and Locals.cs" />
+    <Compile Include="07 Local Functions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
