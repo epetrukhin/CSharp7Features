@@ -45,6 +45,7 @@ namespace CSharp7Features
 
 			TwoOuts(out var x, out _);
 			TwoOuts(out _, out var y);
+			TwoOuts(out _, out _);
 		}
 
 		private static void TwoOuts(out int x, out int y) => throw new NotImplementedException();
