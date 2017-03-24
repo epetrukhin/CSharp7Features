@@ -137,6 +137,8 @@ namespace CSharp7Features
 
 			(int Item1, int Item2) y = (1, 2);
 			//(int Item1, int Item3) z = (1, 2);
+
+			(int foo, string) q = (1, "2");
 		}
 
 		public static void RefTuple()
