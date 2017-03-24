@@ -123,6 +123,8 @@ namespace CSharp7Features
 			dict.Add((1, 98), "foo");
 
 			Debug.Assert(dict.ContainsKey((1, 98)));
+
+			//var opEqual = (1, 98) == (1, 98);
 		}
 
 		public static void Compare()
