@@ -82,6 +82,9 @@ namespace CSharp7Features
 		{
 			var (min, max, count) = Stats(Enumerable.Range(1, 10));
 			(min, _, _) = Stats(Enumerable.Range(1, 100));
+
+			foreach (var (x, y) in Enumerable.Empty<(int, string)>())
+			{}
 		}
 
 		public static void Conversion() // http://mustoverride.com/tuples_conversions/
