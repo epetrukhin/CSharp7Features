@@ -83,8 +83,17 @@ namespace CSharp7Features
 			var (min, max, count) = Stats(Enumerable.Range(1, 10));
 			(min, _, _) = Stats(Enumerable.Range(1, 100));
 
-			foreach (var (x, y) in Enumerable.Empty<(int, string)>())
-			{}
+			var names = new[]
+			{
+				"John",
+				"Jane",
+				"Scott",
+				"Michael"
+			};
+			foreach (var (name, index) in names.Select(ValueTuple.Create<string, int>))
+			{
+				Console.WriteLine($"{index + 1}. {name}");
+			}
 		}
 
 		public static void Conversion() // http://mustoverride.com/tuples_conversions/
@@ -135,6 +144,18 @@ namespace CSharp7Features
 		{
 			var dict = new Dictionary<(int x, double y), string>();
 			Console.WriteLine(dict.Keys.First().x + dict.Keys.First().y);
+
+			var names = new[]
+			{
+				"John",
+				"Jane",
+				"Scott",
+				"Michael"
+			};
+			foreach (var pair in names.Select((name, i) => (name: name, index: i)))
+			{
+				Console.WriteLine($"{pair.index + 1}. {pair.name}");
+			}
 
 			//(int ToString, int GetHashCode, int Equals, int Rest) x = (1, 2, 3, 4);
 
