@@ -17,7 +17,7 @@ namespace CSharp7Features
 	{
 		// Нужен NuGet пакет System.ValueTuple
 
-		public static (bool, int) TryParse(string str)
+		public static (bool, int) TryParseStringToInt(string str)
 		{
 			if (int.TryParse(str, out var x))
 				return (true, x);
@@ -29,7 +29,7 @@ namespace CSharp7Features
 
 		public static void ConsumeTryParse()
 		{
-			var result = TryParse("123");
+			var result = TryParseStringToInt("123");
 			if (result.Item1)
 				Console.WriteLine(result.Item2);
 		}
@@ -81,16 +81,16 @@ namespace CSharp7Features
 		public static void Deconstruct()
 		{
 			var (min, max, count) = Stats(Enumerable.Range(1, 10));
-			(min, max, _) = Stats(Enumerable.Range(1, 100));
+			(min, _, _) = Stats(Enumerable.Range(1, 100));
 		}
 
 		public static void Conversion() // http://mustoverride.com/tuples_conversions/
 		{
-			// Conversion from expression
+			// Conversion from tuple literal
 			(int x, Func<int, bool> pred) tuple1 = (42, x => x > 0);
 			(long x, Predicate<int> pred) tuple2 = (42, x => x > 0);
 
-			// Conversion from type
+			// Implicit and Explicit conversions
 			(int, string) tuple3 = (42, "foo");
 			(double, object) tuple4 = tuple3; // Implicit conversion
 
@@ -101,8 +101,8 @@ namespace CSharp7Features
 
 		public static void TupleToString()
 		{
-			var s1 = (1, "qwerty").ToString();
-			var s2 = (2, (object)null, 45).ToString();
+			var s1 = (1, "qwerty").ToString();			// "(1, qwerty)"
+			var s2 = (2, (object)null, 45).ToString();  // "(2, , 45)"
 		}
 
 		public static void Equality_GetHashCode()
@@ -126,6 +126,17 @@ namespace CSharp7Features
 				.OrderBy(t => t)
 				.Select(t => t.ToString())
 				.ToArray();
+		}
+
+		public static void TupleElementNames()
+		{
+			var dict = new Dictionary<(int x, double y), string>();
+			Console.WriteLine(dict.Keys.First().x + dict.Keys.First().y);
+
+			//(int ToString, int GetHashCode, int Equals, int Rest) x = (1, 2, 3, 4);
+
+			(int Item1, int Item2) y = (1, 2);
+			//(int Item1, int Item3) z = (1, 2);
 		}
 
 		public static void RefTuple()
