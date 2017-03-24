@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using JetBrains.Annotations;
+
 // ReSharper disable UnusedMember.Global
 // ReSharper disable UnusedMember.Local
 
@@ -30,6 +32,12 @@ namespace CSharp7Features
 		}
 
 		private static void PrintHelper(string s) => Console.WriteLine(s);
+
+		private static void Restrictions()
+		{
+//			[ContractAnnotation("null => null; notnull => notnull")]
+//			string Foo([CanBeNull] string s) => s;
+		}
 
 		#region Arg Check in Iterators
 		public static IEnumerable<T> NotNull<T>(this IEnumerable<T> source) where T : class
