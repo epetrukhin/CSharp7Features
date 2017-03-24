@@ -34,6 +34,21 @@ namespace CSharp7Features
 		}
 	}
 
+	public sealed class Deconstruct
+	{
+		public string Prop { get; private set; }
+		private string field;
+
+		public void Foo()
+		{
+			var person = new Person();
+
+			int variable;
+
+			(Prop, field, variable) = person;
+		}
+	}
+
 	public sealed class Person
 	{
 		public string FirstName { get; set; }
