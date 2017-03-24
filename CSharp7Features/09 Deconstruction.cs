@@ -30,7 +30,7 @@ namespace CSharp7Features
 				Age = 27
 			};
 
-			(first, last) = person2; // !!! Cannot convert source type 'CSharp7Features.Person' to target type 'string'
+			(first, last) = person2; // R# error
 		}
 	}
 
