@@ -2,6 +2,9 @@
 // ReSharper disable RedundantAssignment
 // ReSharper disable NotAccessedVariable
 // ReSharper disable UnusedMember.Global
+
+using System.Collections.Generic;
+
 namespace CSharp7Features
 {
 	internal static class Deconstruction
@@ -31,6 +34,24 @@ namespace CSharp7Features
 			};
 
 			(first, last) = person2; // R# error
+
+
+			var personAddresses = new Dictionary<Person, string>();
+			foreach (var kvp in personAddresses)
+			{
+				var person = kvp.Key;
+				var address = kvp.Value;
+			}
+
+			foreach (var (person, address) in personAddresses)
+			{
+
+			}
+
+			foreach (var ((pFirstName, pLastName, pAge), address) in personAddresses)
+			{
+
+			}
 		}
 	}
 
@@ -63,12 +84,18 @@ namespace CSharp7Features
 		}
 	}
 
-	public static class PersonExtensions
+	public static class Extensions
 	{
 		public static void Deconstruct(this Person person, out string firstName, out string lastName)
 		{
 			firstName = person.FirstName;
 			lastName = person.LastName;
+		}
+
+		public static void Deconstruct<TKey, TValue>(this KeyValuePair<TKey, TValue> kvp, out TKey key, out TValue value)
+		{
+			key = kvp.Key;
+			value = kvp.Value;
 		}
 	}
 }
