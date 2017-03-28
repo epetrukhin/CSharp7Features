@@ -58,6 +58,7 @@ namespace CSharp7Features
 		{
 			var x = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
 			Debug.Assert(x.Item7 == 7);
+			Debug.Assert(x.Item19 == 19);
 			Debug.Assert(x.Rest.Rest.Item5 == 19);
 		}
 
