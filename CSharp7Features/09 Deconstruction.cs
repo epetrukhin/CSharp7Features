@@ -33,7 +33,7 @@ namespace CSharp7Features
 				Age = 27
 			};
 
-			(first, last) = person2; // R# error
+			(first, last) = person2;
 
 
 			var personAddresses = new Dictionary<Person, string>();

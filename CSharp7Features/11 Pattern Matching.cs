@@ -25,7 +25,7 @@ namespace CSharp7Features
 			}
 
 			Debug.Assert(o is var other);
-			Console.WriteLine(other.ToString()); // R# error
+			Console.WriteLine(other.ToString());
 
 			throw new ArgumentException("Unsupported argument type");
 		}
