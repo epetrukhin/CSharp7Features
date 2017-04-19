@@ -88,8 +88,7 @@ namespace CSharp7Features
 	{
 		public static void Deconstruct(this Person person, out string firstName, out string lastName)
 		{
-			firstName = person.FirstName;
-			lastName = person.LastName;
+		    (firstName, lastName, _) = person;
 		}
 
 		public static void Deconstruct<TKey, TValue>(this KeyValuePair<TKey, TValue> kvp, out TKey key, out TValue value)
