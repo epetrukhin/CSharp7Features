@@ -15,7 +15,7 @@ namespace CSharp7Features
 {
 	internal static class Tuples
 	{
-		// Нужен NuGet пакет System.ValueTuple
+		// Для .Net версии < 4.7 нужен NuGet пакет System.ValueTuple
 
 		public static (bool, int) TryParseStringToInt(string str)
 		{
