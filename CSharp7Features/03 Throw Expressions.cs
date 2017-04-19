@@ -10,11 +10,11 @@ namespace CSharp7Features
 {
 	internal sealed class ThrowExpressions
 	{
-		private readonly string value;
+		private readonly string _value;
 
 		public ThrowExpressions(string value)
 		{
-			this.value = value ?? throw new ArgumentNullException(nameof(value));
+			_value = value ?? throw new ArgumentNullException(nameof(value));
 		}
 
 		public T GetSecond<T>(IReadOnlyList<T> list)

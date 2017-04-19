@@ -61,9 +61,9 @@ namespace CSharp7Features
 
 		private sealed class Foo
 		{
-			private /*readonly*/ bool field;
+			private /*readonly*/ bool _field;
 
-			public ref bool GetField() => ref field;
+			public ref bool GetField() => ref _field;
 		}
 	}
 }

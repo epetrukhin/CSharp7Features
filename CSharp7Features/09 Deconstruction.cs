@@ -58,7 +58,7 @@ namespace CSharp7Features
 	public sealed class Deconstruct
 	{
 		public string Prop { get; private set; }
-		private string field;
+		private string _field;
 
 		public void Foo()
 		{
@@ -66,7 +66,7 @@ namespace CSharp7Features
 
 			int variable;
 
-			(Prop, field, variable) = person;
+			(Prop, _field, variable) = person;
 		}
 	}
 
