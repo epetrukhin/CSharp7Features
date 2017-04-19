@@ -46,8 +46,8 @@ namespace CSharp7Features
 		public static void CSharp7()
 		{
 			var data = new[] { "1", "2", "3" };
-			ref var index = ref Find("2", data); // Если убрать оба ref, то работать не будет
-			index = "42"; // data: { 1, 42, 3 }
+			ref var item = ref Find("2", data); // Если убрать оба ref, то работать не будет
+			item = "42"; // data: { 1, 42, 3 }
 		}
 
 //		private static ref int DoNotCompiled()

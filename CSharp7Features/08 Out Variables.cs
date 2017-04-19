@@ -27,7 +27,7 @@ namespace CSharp7Features
 
 			if (dict.TryGetValue(42, out string val)) // out var val
 			{
-				Console.WriteLine(value);
+				Console.WriteLine(val);
 			}
 			else
 			{
